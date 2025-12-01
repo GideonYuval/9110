@@ -14,6 +14,18 @@ namespace _9110
 
         }
 
+        static IntNode Arr2Node(int[] arr)
+        {
+            IntNode first = new IntNode(arr[0]);
+            IntNode curr = first;
+            for (int i = 1; i < arr.Length; i++)
+            {
+                curr.SetNext(new IntNode(arr[i]));
+                curr = curr.GetNext();
+            }
+            return first;
+        }
+
 
         // 1
         // add after first
