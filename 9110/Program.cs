@@ -10,7 +10,27 @@ namespace _9110
     {
         static void Main(string[] args)
         {
- 
+            IntNode n = Arr2Node(new int[] { 1, 2, 3 });
+            Console.WriteLine(n);
+
+            AddAfterFirst(n, 4);
+            Console.WriteLine(n); //1423
+
+            AddAfterLast(n, 8);
+            Console.WriteLine(n); //14238
+
+            DeleteSecond(n);
+            Console.WriteLine(n); //1238
+
+            n = DeleteFirst(n);
+            Console.WriteLine(n); //238
+
+            n = AddBeforeFirst(n, 5);
+            Console.WriteLine(n); //5238
+
+            n = DeleteFirst(n);
+            Console.WriteLine(n); //238
+
 
         }
 
